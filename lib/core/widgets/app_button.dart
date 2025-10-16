@@ -64,7 +64,7 @@ class AppButton extends StatelessWidget {
                       fontSize: fontSize ?? 16.font,
                       fontWeight: fontWeight ?? FontWeightsHelper.bold,
                       style: textStyle ??
-                          Styles.b1Medium().copyWith(
+                          Styles.buttonText().copyWith(
                             color: Colors.white,
                           ),
                       overflow: TextOverflow.ellipsis,

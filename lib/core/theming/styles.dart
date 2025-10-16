@@ -1,204 +1,80 @@
 import 'package:animals_task/core/global/dimensions.dart';
 import 'package:flutter/material.dart';
-
 import 'colors.dart';
 
 class Styles {
-  static const String englishFontFamily = 'Inter';
+  static const String englishFontFamily = 'Poppins';
   static const Color fontColor = ColorsManager.textPrimary;
 
-  // ===============================
-  // 🔹 Headlines
-  // ===============================
 
   static TextStyle h1Bold() => TextStyle(
         fontFamily: englishFontFamily,
-        fontSize: 34,
-        fontWeight: FontWeight.w700,
-        height: 1.1,
-        color: fontColor,
-      );
-
-  static TextStyle h2SemiBold() => TextStyle(
-        fontFamily: englishFontFamily,
-        fontSize: 28,
+        fontSize: 24.font,
         fontWeight: FontWeight.w600,
-        height: 1.1,
+        height: 1.2,
         color: fontColor,
       );
 
-  static TextStyle h3Medium() => TextStyle(
+  static TextStyle h2Medium() => TextStyle(
         fontFamily: englishFontFamily,
-        fontSize: 22.font,
+        fontSize: 20.font,
         fontWeight: FontWeight.w500,
-        height: 1.1,
-        color: fontColor,
-      );
-        static TextStyle h25Medium() => TextStyle(
-        fontFamily: englishFontFamily,
-        fontSize: 25.font,
-        fontWeight: FontWeight.w500,
-        height: 1.1,
+        height: 1.2,
         color: fontColor,
       );
 
-  // ===============================
-  // 🔹 Paragraphs
-  // ===============================
-
-  static TextStyle p1Bold() => TextStyle(
+  static TextStyle h3Regular() => TextStyle(
         fontFamily: englishFontFamily,
-        fontSize: 34,
-        fontWeight: FontWeight.w700,
-        height: 1.4,
+        fontSize: 18.font,
+        fontWeight: FontWeight.w400,
+        height: 1.2,
         color: fontColor,
       );
 
-  static TextStyle p2SemiBold() => TextStyle(
-        fontFamily: englishFontFamily,
-        fontSize: 28,
-        fontWeight: FontWeight.w600,
-        height: 1.4,
-        color: fontColor,
-      );
 
-  static TextStyle p3Medium() => TextStyle(
+
+  static TextStyle bodyLarge() => TextStyle(
         fontFamily: englishFontFamily,
-        fontSize: 22,
+        fontSize: 16.font,
         fontWeight: FontWeight.w500,
         height: 1.4,
         color: fontColor,
       );
 
-  static TextStyle p4Medium() => TextStyle(
+  static TextStyle bodyRegular() => TextStyle(
         fontFamily: englishFontFamily,
-        fontSize: 17,
-        fontWeight: FontWeight.w500,
-        height: 1.4,
-        color: fontColor,
-      );
-
-  static TextStyle p4Regular() => TextStyle(
-        fontFamily: englishFontFamily,
-        fontSize: 17,
+        fontSize: 14.font,
         fontWeight: FontWeight.w400,
         height: 1.4,
-        color: fontColor,
+        color: ColorsManager.textSecondary,
       );
 
-  static TextStyle p5Medium() => TextStyle(
+  static TextStyle bodySmall() => TextStyle(
         fontFamily: englishFontFamily,
-        fontSize: 15,
-        fontWeight: FontWeight.w500,
-        height: 1.4,
-        color: fontColor,
-      );
-
-  static TextStyle p5Regular() => TextStyle(
-        fontFamily: englishFontFamily,
-        fontSize: 15,
+        fontSize: 12.font,
         fontWeight: FontWeight.w400,
         height: 1.4,
-        color: fontColor,
+        color: ColorsManager.textSecondary,
       );
-
-  static TextStyle p6Medium() => TextStyle(
+  static TextStyle buttonText() => TextStyle(
         fontFamily: englishFontFamily,
-        fontSize: 13,
+        fontSize: 16.font,
         fontWeight: FontWeight.w500,
-        height: 1.4,
-        color: fontColor,
+        color: ColorsManager.background,
       );
 
-  static TextStyle p6Regular() => TextStyle(
-        fontFamily: englishFontFamily,
-        fontSize: 13,
-        fontWeight: FontWeight.w400,
-        height: 1.4,
-        color: fontColor,
-      );
 
-  static TextStyle p7Medium() => TextStyle(
+  static TextStyle labelMedium() => TextStyle(
         fontFamily: englishFontFamily,
-        fontSize: 11,
+        fontSize: 13.font,
         fontWeight: FontWeight.w500,
-        height: 1.4,
-        color: fontColor,
+        color: ColorsManager.textSecondary,
       );
 
-  static TextStyle p7Regular() => TextStyle(
+  static TextStyle labelSmall() => TextStyle(
         fontFamily: englishFontFamily,
-        fontSize: 11,
+        fontSize: 11.font,
         fontWeight: FontWeight.w400,
-        height: 1.4,
-        color: fontColor,
-      );
-
-  // ===============================
-  // 🔹 Body Text
-  // ===============================
-
-  static TextStyle b1Medium() => TextStyle(
-        fontFamily: englishFontFamily,
-        fontSize: 17,
-        fontWeight: FontWeight.w500,
-        height: 1.1,
-        color: fontColor,
-      );
-
-  static TextStyle b1Regular() => TextStyle(
-        fontFamily: englishFontFamily,
-        fontSize: 17,
-        fontWeight: FontWeight.w400,
-        height: 1.1,
-        color: fontColor,
-      );
-
-  static TextStyle b2Medium() => TextStyle(
-        fontFamily: englishFontFamily,
-        fontSize: 15,
-        fontWeight: FontWeight.w500,
-        height: 1.1,
-        color: fontColor,
-      );
-
-  static TextStyle b2Regular() => TextStyle(
-        fontFamily: englishFontFamily,
-        fontSize: 15,
-        fontWeight: FontWeight.w400,
-        height: 1.1,
-        color: fontColor,
-      );
-
-  static TextStyle b3Medium() => TextStyle(
-        fontFamily: englishFontFamily,
-        fontSize: 13,
-        fontWeight: FontWeight.w500,
-        height: 1.1,
-        color: fontColor,
-      );
-
-  static TextStyle b3Regular() => TextStyle(
-        fontFamily: englishFontFamily,
-        fontSize: 13,
-        fontWeight: FontWeight.w400,
-        height: 1.1,
-        color: fontColor,
-      );
-
-  static TextStyle b4Medium() => TextStyle(
-        fontFamily: englishFontFamily,
-        fontSize: 11,
-        fontWeight: FontWeight.w500,
-        height: 1.1,
-        color: fontColor,
-      );
-
-  static TextStyle b4Regular() => TextStyle(
-        fontFamily: englishFontFamily,
-        fontSize: 11,
-        fontWeight: FontWeight.w400,
-        height: 1.1,
-        color: fontColor,
+        color: ColorsManager.textSecondary,
       );
 }
