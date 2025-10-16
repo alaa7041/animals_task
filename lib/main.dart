@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'features/home/presentation/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,7 +10,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -19,14 +19,12 @@ class MyApp extends StatelessWidget {
         builder: (_, child) {
           return MaterialApp(
             useInheritedMediaQuery: true,
-           
             debugShowCheckedModeBanner: false,
             title: "Animals",
             theme: ThemeData(
-              fontFamily: 'inter',
               scaffoldBackgroundColor: const Color(0xFFFFFFFF),
             ),
-            home: Scaffold(),
+            home: HomeScreen(),
           );
         },
       ),
