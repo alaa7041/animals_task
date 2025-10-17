@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'core/di/dependency_injection.dart';
 import 'features/home/presentation/screens/home_screen.dart';
 
-void main() {
+void main() async {
+   WidgetsFlutterBinding.ensureInitialized();
+    await setupGetIt();
   runApp(const MyApp());
 }
 

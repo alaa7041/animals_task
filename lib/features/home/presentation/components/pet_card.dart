@@ -1,5 +1,6 @@
 import 'package:animals_task/core/global/dimensions.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 import '../../../../core/helpers/utils.dart';
 import '../../../../core/theming/colors.dart';
@@ -8,7 +9,10 @@ import '../../../../core/widgets/app_text.dart';
 
 class PetCard extends StatelessWidget {
   final bool isHorizontal;
-  const PetCard({super.key, this.isHorizontal = false});
+  final String name, describtion, lifeSpan;
+
+
+  const PetCard({super.key, this.isHorizontal = false, required this.name, required this.describtion, required this.lifeSpan});
 
   @override
   Widget build(BuildContext context) {
@@ -41,10 +45,10 @@ class PetCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  AppText(title: 'Charlie', style: Styles.h3Regular()),
-                  AppText(title: 'Golden Retriever', style: Styles.bodySmall()),
-                  const SizedBox(height: 8),
-                  AppText(title: '2 years old', style: Styles.labelSmall()),
+                  AppText(title: name, style: Styles.h3Regular()),
+                  AppText(title: describtion, style: Styles.bodySmall()),
+                  Gap(8),
+                  AppText(title: lifeSpan, style: Styles.labelSmall()),
                 ],
               ),
             ),

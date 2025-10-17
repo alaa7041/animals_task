@@ -1,5 +1,4 @@
-import 'package:animals_task/features/home/data/repo/home_repo.dart';
-import 'package:bloc/bloc.dart';
+import 'package:animals_task/features/home/data/repo/breeds_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/network_utils/api_result.dart';
@@ -8,17 +7,17 @@ import '../../data/models/breeds_model.dart';
 part 'breeds_state.dart';
 
 class BreedsCubit extends Cubit<BreedsState> {
-  final HomeRepo _repository;
+  final BreedsRepo repository;
 
-  BreedsCubit(this._repository) : super(BreedsInitial());
+  BreedsCubit(this.repository) : super(BreedsInitial());
 
   static BreedsCubit get(context) => BlocProvider.of(context);
 
   List<BreedModel> breeds = [];
 
- Future<void> fetchBreeds() async {
+  Future<void> fetchBreeds() async {
     emit(BreedsLoading());
-    final ApiResult<List<BreedModel>> response = await _repository.getBreeds();
+    final ApiResult<List<BreedModel>> response = await repository.getBreeds();
 
     response.when(
       success: (data) {
