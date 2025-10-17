@@ -1,4 +1,4 @@
-String appName = "Wosalnak";
+String appName = "animals task";
 String appVersion = "1.0.0";
 
 bool isLoggedUser = false;
