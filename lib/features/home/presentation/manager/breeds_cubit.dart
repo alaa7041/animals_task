@@ -1,4 +1,5 @@
 import 'package:animals_task/features/home/data/repo/breeds_repo.dart';
+import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/network_utils/api_result.dart';

@@ -4,7 +4,7 @@ part 'breeds_model.g.dart';
 
 @JsonSerializable()
 class BreedModel {
-  final WeightModel weight;
+  final WeightModel? weight;
   final String id;
   final String name;
   final String? cfaUrl;
@@ -43,7 +43,7 @@ class BreedModel {
   final String? referenceImageId;
 
   BreedModel({
-    required this.weight,
+     this.weight,
     required this.id,
     required this.name,
     this.cfaUrl,

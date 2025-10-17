@@ -1,6 +1,6 @@
 import 'package:animals_task/core/network_utils/dio_factory.dart';
 import 'package:animals_task/features/home/data/repo/breeds_repo.dart';
-import 'package:animals_task/features/home/domain/cubit/breeds_cubit.dart';
+import 'package:animals_task/features/home/presentation/manager/breeds_cubit.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';

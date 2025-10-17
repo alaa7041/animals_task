@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 
 import '../../../../core/theming/colors.dart';
-import '../../domain/cubit/breeds_cubit.dart';
+import '../manager/breeds_cubit.dart';
 import '../components/home_app_bar.dart';
 import '../components/pet_card.dart';
 import '../components/pet_category_list.dart';

@@ -7,7 +7,9 @@ part of 'breeds_model.dart';
 // **************************************************************************
 
 BreedModel _$BreedModelFromJson(Map<String, dynamic> json) => BreedModel(
-      weight: WeightModel.fromJson(json['weight'] as Map<String, dynamic>),
+      weight: json['weight'] == null
+          ? null
+          : WeightModel.fromJson(json['weight'] as Map<String, dynamic>),
       id: json['id'] as String,
       name: json['name'] as String,
       cfaUrl: json['cfaUrl'] as String?,
