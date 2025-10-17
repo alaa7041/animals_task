@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
-
+import '../../../../core/widgets/app_text.dart';
 
 class HomeAppBar extends StatelessWidget {
   const HomeAppBar({super.key});
@@ -12,17 +12,14 @@ class HomeAppBar extends StatelessWidget {
     return AppBar(
       backgroundColor: ColorsManager.background,
       elevation: 0,
-      title: Text(
-        'Find Your Pet',
+      title: AppText(title: 
+        'Find Your Forever Pet',
         style: Styles.h2Medium(),
       ),
       actions: const [
         Padding(
           padding: EdgeInsets.only(right: 16),
-          child: CircleAvatar(
-            radius: 20,
-            backgroundImage: AssetImage('assets/images/profile.png'),
-          ),
+          child: Icon(Icons.notifications_none_outlined),
         ),
       ],
     );

@@ -1,6 +1,10 @@
+import 'package:animals_task/core/global/dimensions.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../core/helpers/utils.dart';
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
+import '../../../../core/widgets/app_text.dart';
 
 class PetCard extends StatelessWidget {
   final bool isHorizontal;
@@ -8,7 +12,7 @@ class PetCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final image = 'assets/images/dog.png';
+    final image = "animal_1";
 
     return Container(
       width: isHorizontal ? double.infinity : 160,
@@ -25,9 +29,9 @@ class PetCard extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(12),
             child: Image.asset(
-              image,
-              width: isHorizontal ? 80 : 140,
-              height: isHorizontal ? 80 : 140,
+              Utils.getAssetPNGPath(image),
+              width: isHorizontal ? 80 : 140.width,
+              height: isHorizontal ? 80 : 140.height,
               fit: BoxFit.cover,
             ),
           ),
@@ -37,10 +41,10 @@ class PetCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Charlie', style: Styles.h3Regular()),
-                  Text('Golden Retriever', style: Styles.bodySmall()),
+                  AppText(title: 'Charlie', style: Styles.h3Regular()),
+                  AppText(title: 'Golden Retriever', style: Styles.bodySmall()),
                   const SizedBox(height: 8),
-                  Text('2 years old', style: Styles.labelSmall()),
+                  AppText(title: '2 years old', style: Styles.labelSmall()),
                 ],
               ),
             ),

@@ -14,6 +14,13 @@ class Styles {
         height: 1.2,
         color: fontColor,
       );
+        static TextStyle font20Bold() => TextStyle(
+        fontFamily: englishFontFamily,
+        fontSize: 20.font,
+        fontWeight: FontWeight.w600,
+        height: 1.2,
+        color: fontColor,
+      );
 
   static TextStyle h2Medium() => TextStyle(
         fontFamily: englishFontFamily,
@@ -44,6 +51,14 @@ class Styles {
   static TextStyle bodyRegular() => TextStyle(
         fontFamily: englishFontFamily,
         fontSize: 14.font,
+        fontWeight: FontWeight.w400,
+        height: 1.4,
+        color: ColorsManager.textSecondary,
+      );
+      
+  static TextStyle body16Regular() => TextStyle(
+        fontFamily: englishFontFamily,
+        fontSize: 16.font,
         fontWeight: FontWeight.w400,
         height: 1.4,
         color: ColorsManager.textSecondary,

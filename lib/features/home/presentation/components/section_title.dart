@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/theming/styles.dart';
+import '../../../../core/widgets/app_text.dart';
 
 class SectionTitle extends StatelessWidget {
   final String title;
@@ -8,9 +9,9 @@ class SectionTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: Styles.h2Medium(),
+    return AppText(
+      title: title,
+      style: Styles.font20Bold(),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
 
@@ -9,9 +10,10 @@ class SearchField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
-        hintText: 'Search pets...',
-        hintStyle: Styles.bodyRegular(),
-        prefixIcon: const Icon(Icons.search, color: ColorsManager.textSecondary),
+        hintText: 'Search',
+        hintStyle: Styles.body16Regular(),
+        prefixIcon:
+            const Icon(Icons.search, color: ColorsManager.textSecondary),
         filled: true,
         fillColor: ColorsManager.cardBackground,
         border: OutlineInputBorder(
