@@ -21,7 +21,6 @@ class HomeRepo {
         ApiErrorModel(message: "No internet connection"),
       );
     }
-
     try {
       final result = await request();
       return ApiResult.success(result);
@@ -29,7 +28,7 @@ class HomeRepo {
       return ApiResult.error(ApiErrorHandler.handle(error));
     }
   }
-    Future<ApiResult<List<BreedModel>>> getBreeds() {
+  Future<ApiResult<List<BreedModel>>> getBreeds() {
     return _safeRequest(() => _apiService.getBreeds());
   }
 }
