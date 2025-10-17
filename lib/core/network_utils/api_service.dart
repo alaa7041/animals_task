@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
+import '../../features/home/data/models/breeds_model.dart';
 import 'api_constants.dart';
 
 part 'api_service.g.dart';
@@ -8,9 +9,7 @@ part 'api_service.g.dart';
 abstract class ApiService {
   factory ApiService(Dio dio, {String baseUrl}) = _ApiService;
 
-//  @POST(ApiConstants.registerEndpoint)
-//  Future<RegisterResponse> register(
-//    @Body() RegisterRequestBody signupRequestBody,
-//  );
+  @GET(ApiConstants.breedsEndpoint)
+  Future<List<BreedModel>> getBreeds();
 
 }

@@ -2,6 +2,7 @@ import 'package:animals_task/features/home/presentation/screens/home_screen.dart
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+
 import '../caching_utils/shared_prefernce_helper.dart';
 import '../helpers/constants.dart';
 import '../routing/route_manager.dart';
@@ -74,7 +75,7 @@ class DioFactory {
             await SharedPrefHelper.setData(
                 SharedPrefsKeys.notShowOnboarding, true);
             // Navigate to splash screen (beginning of the app)
-            RouteManager.navigateAndPopAll( HomeScreen());
+            RouteManager.navigateAndPopAll(HomeScreen());
             return handler.reject(
               DioException(
                 requestOptions: error.requestOptions,

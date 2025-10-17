@@ -1,6 +1,6 @@
 class ApiConstants {
-  static const String stgBaseUrl = "https://api.future-x.tharadtech.com/api/";
+  static const String stgBaseUrl = "https://api.thecatapi.com/v1/";
 
-  //static const String notificationsEndpoint = 'notifications';
+  static const String breedsEndpoint = 'breeds';
 
 }
